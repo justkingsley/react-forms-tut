@@ -39,7 +39,7 @@ export default function Home() {
                 <label
                   htmlFor= 'city'
                   className="block text-sm pb-2 font-latoBold text-gray-700">Select City</label>
-                <select className="border-2 text-sm focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
+                <select name = 'city' className="border-2 text-sm focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
                   <option>Harare</option>
                   <option>Bulawayo</option>
                   <option>Gweru</option>
@@ -49,7 +49,21 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="pb-4 text-sm">
+              
+              <div className="pb-2">
+              <label htmlFor="terms">
+                Terms of Service
+              </label>
+              </div>
+            
 
+              <div className="flex itmes-center gap-2">
+                <input type="checkbox" value="checked" name="terms" className = "h-4 w-4 text-green-500 focus:border-green-600 hover:ring-green-500 focus:ring-0"  />
+                <p>I agree the <a href="#" className="text-blue-600 hover:underline">terms of service</a></p>
+              </div>
+              
+            </div>
           </div>
         </form>
       </main>
