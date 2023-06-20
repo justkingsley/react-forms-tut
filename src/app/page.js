@@ -1,3 +1,4 @@
+import FormComponent from "@/components/FormComponent";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,23 +17,23 @@ export default function Home() {
 
 
             <div className = "mt-6">
-            <div className = "pb-4">
-              <label htmlFor="name" className="block text-sm pb-2 font-latoBold">Name</label>
-              <input placeholder = "Enter first name" id="name" type="text" ></input>
-            </div>
+              <FormComponent 
+                labelName={'Name'}
+                type={'text'}
+                htmlFor={'name'}
+                id={'id'}
+                placeholder={'Fill in your name'}
+              />
 
-            <div className = "pb-4">
-              <label 
-              htmlFor="name" 
-              className="block text-sm pb-2 font-latoBold">
-              Name
-              </label>
-              <input
-              placeholder = "Enter first name" id="name" type="text"
-              className = "border-2 border-gray-500 p-2 rounded-md w-1/2"
+
+              <FormComponent 
+                labelName={'Name'}
+                type={'text'}
+                htmlFor={'name'}
+                id={'id'}
+                placeholder={'Fill in your name'}
               />
             </div>
-          </div>
 
 
           </div>
