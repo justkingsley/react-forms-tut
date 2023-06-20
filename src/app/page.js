@@ -47,9 +47,9 @@ export default function Home() {
                   <option>victoria Falls</option>
                 </select>
               </div>
-            </div>
 
-            <div className="pb-4 text-sm">
+
+              <div className="pb-4 text-sm">
               
               <div className="pb-2">
               <label htmlFor="terms">
@@ -64,6 +64,17 @@ export default function Home() {
               </div>
               
             </div>
+
+
+            <button
+            type="submit"
+            className="bg-green-500 font-latoBold text-sm text-white py-3 mt-2 rounded-lg w-full">
+              Sign up
+            </button>
+
+            </div>
+
+            
           </div>
         </form>
       </main>
