@@ -19,31 +19,42 @@ export default function Home() {
 
             <div className="mt-6">
               <FormComponent
+                htmlFor={'firstName'}
+                label={'First name'}
                 type={'text'}
                 id={'firstName'}
                 placeholder={'Enter your first name'}
               />
 
               <FormComponent
+                htmlFor={'lastName'}
+                label={'Last name'}
                 type={'text'}
                 id={'lastName'}
                 placeholder={'Enter your last name'}
               />
 
               <FormComponent
-                type={'number'}
+                htmlFor={'phone'}
+                label={'Phone'}
+                type={'phone'}
                 id={'phone'}
                 placeholder={'Enter your phone'}
               />
 
               <FormComponent
+                htmlFor={'Email'}
+                label={'Email'}
                 type={'email'}
                 id={'email'}
                 placeholder={'Enter your email'}
               />
 
               <div className="pb-4">
-                <select name='city' className="border-2 text-sm focus:ring-0 focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
+                <label htmlFor='city' className="text-sm text-gray-500 block">
+                  City
+                </label>
+                <select id='city' className="border-2 text-sm focus:ring-0 focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
                   <option>Harare</option>
                   <option>Bulawayo</option>
                   <option>Gweru</option>
