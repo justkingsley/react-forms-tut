@@ -19,27 +19,31 @@ export default function Home() {
 
             <div className="mt-6">
               <FormComponent
-                labelName={'Name'}
                 type={'text'}
-                htmlFor={'name'}
-                id={'name'}
-                placeholder={'Enter your name'}
+                id={'firstName'}
+                placeholder={'Enter your first name'}
               />
 
+              <FormComponent
+                type={'text'}
+                id={'lastName'}
+                placeholder={'Enter your last name'}
+              />
 
               <FormComponent
-                labelName={'Email'}
+                type={'number'}
+                id={'phone'}
+                placeholder={'Enter your phone'}
+              />
+
+              <FormComponent
                 type={'email'}
-                htmlFor={'email'}
                 id={'email'}
                 placeholder={'Enter your email'}
               />
 
               <div className="pb-4">
-                <label
-                  htmlFor= 'city'
-                  className="block text-sm pb-2 font-latoBold text-gray-700">Select City</label>
-                <select name = 'city' className="border-2 text-sm focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
+                <select name='city' className="border-2 text-sm focus:ring-0 focus:border-green-600 outline-none border-gray-500 p-2 rounded-md w-1/2">
                   <option>Harare</option>
                   <option>Bulawayo</option>
                   <option>Gweru</option>
@@ -50,31 +54,31 @@ export default function Home() {
 
 
               <div className="pb-4 text-sm">
-              
-              <div className="pb-2">
-              <label htmlFor="terms">
-                Terms of Service
-              </label>
-              </div>
-            
 
-              <div className="flex itmes-center gap-2">
-                <input type="checkbox" value="checked" name="terms" className = "h-4 w-4 text-green-500 focus:border-green-600 hover:ring-green-500 focus:ring-0"  />
-                <p>I agree the <a href="#" className="text-blue-600 hover:underline">terms of service</a></p>
+                <div className="pb-2">
+                  <label htmlFor="terms">
+                    Terms of Service
+                  </label>
+                </div>
+
+
+                <div className="flex itmes-center gap-2">
+                  <input type="checkbox" value="checked" name="terms" className="h-4 w-4 text-green-500 focus:border-green-600 hover:ring-green-500 focus:ring-0" />
+                  <p>I agree the <a href="#" className="text-blue-600 hover:underline">terms of service</a></p>
+                </div>
+
               </div>
-              
+
+
+              <button
+                type="submit"
+                className="bg-green-500 font-latoBold text-sm text-white py-3 mt-2 rounded-lg w-full">
+                Sign up
+              </button>
+
             </div>
 
 
-            <button
-            type="submit"
-            className="bg-green-500 font-latoBold text-sm text-white py-3 mt-2 rounded-lg w-full">
-              Sign up
-            </button>
-
-            </div>
-
-            
           </div>
         </form>
       </main>
