@@ -89,9 +89,9 @@ export default function Home() {
                 type={'email'}
                 id={'email'}
                 touchName={formik.touched.name}
-                onBlur={formik.handleBlur}
                 error={formik.errors.email}
                 value={formik.values.email}
+                onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
               />
 
@@ -102,9 +102,9 @@ export default function Home() {
                 type={'phone'}
                 id={'phone'}
                 touchName={formik.touched.name}
-                onBlur={formik.handleBlur}
                 error={formik.errors.phone}
                 value={formik.values.phone}
+                onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
               />
 
