@@ -20,7 +20,8 @@ export default function Home() {
     },
 
     onSubmit: (values) => {
-      console.log(values)
+      console.log(values);
+      console.log('Errors here')
     }
 
   });
@@ -48,7 +49,9 @@ export default function Home() {
       </Head>
 
       <main className="h-screen flex items-center justify-center">
-        <form className="bg-white flex rounded-lg w-1/2 font-latoRegular">
+        <form
+        onSubmit={formik.handleSubmit}
+        className="bg-white flex rounded-lg w-1/2 font-latoRegular">
           <div className="flex-1 text-gray-700 p-10">
             <h1 className="text-4xl pb-2 font-latoRegular">Hello there 👋🏿</h1>
             <p>Create your <span className="text-green-500">High Five</span> account.</p>
@@ -131,7 +134,6 @@ export default function Home() {
 
               <button
                 type="submit"
-                onSubmit={formik.handleSubmit}
                 className="bg-green-500 font-latoBold text-sm text-white py-2 my-2 rounded-lg w-full">
                 Sign up
               </button>
