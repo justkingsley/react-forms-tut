@@ -9,6 +9,8 @@ import * as yup from "yup";
 
 export default function Home() {
 
+  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
   //Getting values
   const formik = useFormik({
     initialValues:{
@@ -18,6 +20,14 @@ export default function Home() {
       city: "Select City",
       terms: ""
     },
+
+    validationSchema: yup.object({
+      name: yup.string().max(20, 'Name must be 20 characters or less').required('Name is required'),
+      email: yup.string().email('Invalid email address').required('Email is required'),
+      terms: yup.array().required('Terms of Use must be checked'),
+      phone: yup.string().matches(phoneRegExp, 'Phone number is not valid').required('Phone number is required'),
+
+    }),
 
     onSubmit: (values) => {
       console.log(values);
@@ -65,7 +75,10 @@ export default function Home() {
                 label={'Full Name'}
                 type={'text'}
                 id={'name'}
+                error={formik.errors.name}
                 value={formik.values.name}
+                touchName={formik.touched.name}
+                onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
               />
 
@@ -75,6 +88,9 @@ export default function Home() {
                 label={'Email'}
                 type={'email'}
                 id={'email'}
+                touchName={formik.touched.name}
+                onBlur={formik.handleBlur}
+                error={formik.errors.email}
                 value={formik.values.email}
                 onChange={formik.handleChange}
               />
@@ -85,6 +101,9 @@ export default function Home() {
                 label={'Phone'}
                 type={'phone'}
                 id={'phone'}
+                touchName={formik.touched.name}
+                onBlur={formik.handleBlur}
+                error={formik.errors.phone}
                 value={formik.values.phone}
                 onChange={formik.handleChange}
               />
